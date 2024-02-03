@@ -37,7 +37,7 @@ context('Form', () => {
     }));
   });
 
-  it('should show errors', () => {
+  it('should hide errors', () => {
     cy.get('[id="#/properties/name-input"]').clear();
 
     cy.get('[id="#/properties/name"] p:first-child').should('not.be.empty');

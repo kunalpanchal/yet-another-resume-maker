@@ -1,32 +1,99 @@
 {
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "minLength": 1
-    },
-    "description": {
-      "title": "Long Description",
-      "type": "string"
-    },
-    "done": {
-      "type": "boolean"
-    },
-    "due_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "rating": {
-      "type": "integer",
-      "maximum": 5
-    },
-    "recurrence": {
-      "type": "string",
-      "enum": ["Never", "Daily", "Weekly", "Monthly"]
-    },
-    "recurrence_interval": {
-      "type": "integer"
-    }
-  },
-  "required": ["name", "due_date"]
+	"type": "object",
+	"properties": {
+		"basic": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"website": {
+					"type": "string",
+					"format": "url"
+				}
+			}
+		},
+		"experience": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"achievement": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"achievement_msg": {
+									"type": "string"
+								},
+								"hide": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"company": {
+						"type": "string"
+					},
+					"position": {
+						"type": "string"
+					},
+					"location": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"education": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"achievement": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"achievement_msg": {
+									"type": "string"
+								},
+								"hide": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"score": {
+						"type": "string"
+					},
+					"major": {
+						"type": "string"
+					},
+					"institutionName": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
 }

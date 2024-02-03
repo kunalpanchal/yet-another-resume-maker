@@ -3,52 +3,156 @@
   "elements": [
     {
       "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
+      "scope": "#/properties/basic"
     },
     {
       "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/due_date"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/description",
+      "scope": "#/properties/experience",
       "options": {
-        "multi": true
+        "elementLabelProp": "company",
+        "detail": {
+          "type": "VerticalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/company"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/position"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/location"
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/startDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/endDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/achievement",
+              "options": {
+                "detail": {
+                  "type": "HorizontalLayout",
+                  "elements": [
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/achievement_msg",
+                      "options": {
+                        "multi": true
+                      }
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/hide"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/education",
+      "options": {
+        "elementLabelProp": "institutionName",
+        "detail": {
+          "type": "VerticalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/institutionName"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/major"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/score"
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/startDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/endDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/achievement",
+              "options": {
+                "detail": {
+                  "type": "HorizontalLayout",
+                  "elements": [
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/achievement_msg",
+                      "options": {
+                        "multi": true
+                      }
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/hide"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     }
   ]
