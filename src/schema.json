@@ -1,0 +1,99 @@
+{
+	"type": "object",
+	"properties": {
+		"basic": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"website": {
+					"type": "string",
+					"format": "url"
+				}
+			}
+		},
+		"experience": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"achievement": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"achievement_msg": {
+									"type": "string"
+								},
+								"hide": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"company": {
+						"type": "string"
+					},
+					"position": {
+						"type": "string"
+					},
+					"location": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"education": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"endDate": {
+						"type": "string",
+						"format": "date"
+					},
+					"achievement": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"achievement_msg": {
+									"type": "string"
+								},
+								"hide": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"score": {
+						"type": "string"
+					},
+					"major": {
+						"type": "string"
+					},
+					"institutionName": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}

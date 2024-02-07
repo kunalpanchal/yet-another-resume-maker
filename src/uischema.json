@@ -1,0 +1,159 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "scope": "#/properties/basic"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/experience",
+      "options": {
+        "elementLabelProp": "company",
+        "detail": {
+          "type": "VerticalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/company"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/position"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/location"
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/startDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/endDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/achievement",
+              "options": {
+                "detail": {
+                  "type": "HorizontalLayout",
+                  "elements": [
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/achievement_msg",
+                      "options": {
+                        "multi": true
+                      }
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/hide"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/education",
+      "options": {
+        "elementLabelProp": "institutionName",
+        "detail": {
+          "type": "VerticalLayout",
+          "elements": [
+            {
+              "type": "Control",
+              "scope": "#/properties/institutionName"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/major"
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/score"
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "type": "Control",
+                  "scope": "#/properties/startDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                },
+                {
+                  "type": "Control",
+                  "scope": "#/properties/endDate",
+                  "options": {
+                    "format": "date",
+                    "views": [
+                      "year",
+                      "month"
+                    ],
+                    "dateFormat": "MM/YYYY"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Control",
+              "scope": "#/properties/achievement",
+              "options": {
+                "detail": {
+                  "type": "HorizontalLayout",
+                  "elements": [
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/achievement_msg",
+                      "options": {
+                        "multi": true
+                      }
+                    },
+                    {
+                      "type": "Control",
+                      "scope": "#/properties/hide"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
